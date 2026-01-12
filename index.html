@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Kind of Concert Are You? | Orchestrating Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app" id="app">
+        <!-- Decorative Background Elements -->
+        <div class="bg-decoration">
+            <div class="music-staff staff-1"></div>
+            <div class="music-staff staff-2"></div>
+            <div class="music-staff staff-3"></div>
+            <div class="floating-note note-1">♪</div>
+            <div class="floating-note note-2">♫</div>
+            <div class="floating-note note-3">♩</div>
+            <div class="floating-note note-4">𝄞</div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <section class="screen welcome-screen active" id="welcome-screen">
+            <div class="welcome-content">
+                <div class="title-flourish">✦</div>
+                <h1 class="main-title">
+                    <span class="title-line">What Kind of</span>
+                    <span class="title-line title-accent">Concert</span>
+                    <span class="title-line">Are You?</span>
+                </h1>
+                <p class="subtitle">Discover your orchestra personality in 8 questions</p>
+                <button class="btn btn-primary start-btn" id="start-btn">
+                    <span class="btn-text">Begin</span>
+                    <span class="btn-icon">→</span>
+                </button>
+                <p class="tap-hint">Tap anywhere to begin</p>
+            </div>
+            <div class="exhibit-badge">
+                <span>Part of</span>
+                <strong>Orchestrating Community</strong>
+            </div>
+        </section>
+
+        <!-- Question Screen -->
+        <section class="screen question-screen" id="question-screen">
+            <header class="question-header">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">1 of 8</span>
+                </div>
+            </header>
+            
+            <div class="question-content">
+                <h2 class="question-text" id="question-text">Pick a section of the orchestra</h2>
+                
+                <div class="answers-grid" id="answers-grid">
+                    <!-- Answers will be dynamically inserted -->
+                </div>
+            </div>
+
+            <footer class="question-footer">
+                <button class="btn btn-secondary back-btn" id="back-btn">
+                    <span class="btn-icon">←</span>
+                    <span class="btn-text">Back</span>
+                </button>
+            </footer>
+        </section>
+
+        <!-- Result Screen -->
+        <section class="screen result-screen" id="result-screen">
+            <div class="result-content">
+                <div class="result-reveal">
+                    <span class="result-label">You are...</span>
+                    <h2 class="result-title" id="result-title">A Patriotic Salute Concert</h2>
+                </div>
+                
+                <div class="result-card" id="result-card">
+                    <div class="result-image-container">
+                        <div class="result-image" id="result-image">
+                            <!-- Placeholder for James Dixon image -->
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🎼</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-description" id="result-description">
+                        <!-- Result text will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button class="btn btn-primary restart-btn" id="restart-btn">
+                        <span class="btn-icon">↺</span>
+                        <span class="btn-text">Take Quiz Again</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="exhibit-badge">
+                <span>Explore more at</span>
+                <strong>Orchestrating Community</strong>
+            </div>
+        </section>
+
+        <!-- Idle Screen (for kiosk attract mode) -->
+        <section class="screen idle-screen" id="idle-screen">
+            <div class="idle-content">
+                <div class="idle-animation">
+                    <span class="idle-note">♪</span>
+                    <span class="idle-note">♫</span>
+                    <span class="idle-note">♩</span>
+                </div>
+                <h2 class="idle-title">Touch to Discover</h2>
+                <p class="idle-subtitle">What kind of concert are you?</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
